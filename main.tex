@@ -301,6 +301,57 @@ La procedura di addestramento è schematizzata in questo modo.
 \includegraphics[width=\textwidth]{pictures/gen_models_diag_2.jpg}
 \end{frame}
 
+\begin{frame}[plain,allowframebreaks]\small\frametitle{All'inizio c'è Google}
+
+  \begin{itemize}
+  \item
+    Le funzionalità di generazione che abbiamo visto sono una elaborazione dei meccanismi di ricerca ed elaborazione presenti in Google.
+ \item    
+  Il suo primo algoritmo è stato \emph{Page Rank}, la cui introduzione ha dato luogo all'inizio dell'attività aziendale.
+\item 
+Il problema è: come si rende accessibile un archivio o una biblioteca troppo grande per essere percorsa interamente? La risposta è nota da molto tempo. Il problema si risolve facendo uno o più cataloghi. Ma se la biblioteca è così grande che nessuno può conoscere il contenuto di tutti i libri? E inoltre se i lettori non solo consultano i libri ma depositano nella biblioteca i propri testi? E i testi sono in tante lingue e nessun bibliotecario le conosce tutte? Nasce qui il concetto fondamentale: bisogna fare il catalogo senza conoscere il contenuto dei libri.
+\item 
+Si può operare in modo che i lettori si facciano il catalogo da sé, o meglio che riordinino i libri rendendo più accessibili i più richiesti. Se in un lungo scaffale lineare metto in prima posizione il libro che ho appena usato, nei tempi lunghi i libri più richiesti saranno i più accessibili. \emph{La verità di questo enunciato è un teorema di probabilità}.
+\item
+Se l'archivio non è lineare ma ha una struttura reticolare, come quella di Internet, il concetto di ordinamento deve essere modificato per adattarsi alla struttura specifica.
+\item 
+L'algoritmo che realizza questo è Page Rank è un brevetto di Lawrence (Larry) Page.
+\item
+L'idea iniziale di Larry Page si è sviluppata prima di tutto in una impresa industriale ad alto contenuto di ricerca e innovazione tecnologica. Il Page Rank è stato corretto e affiancato da una serie di altri algoritmi, ma tutti basati su concetti analoghi.
+\item
+  La crescita di Internet dagli inizi ad oggi rende irrealizzabile l'idea di percorrerlo tutto per rispondere ad un singola interrogazione. Dunque, Google campiona pagine web percorrendo la rete di Internet e ne tiene una copia corrente nei suoi server. Poi, Page Rank e gli analoghi algoritmi navigano nelle copie per effettuare le ricerche.
+\item Inoltre, Google si basa in modo sostanziale su meccanismi di apprendimento automatico supervisionato. Un esempio molto chiaro di meccanismo di apprendimento è l'algoritmo di correzione ortografica di Google. Il problema di Google è correggere gli errori di ortografia nelle ricerche fatte dagli utenti. L'utente sperimenta che non solo Google riconosce spesso gli errori, ma suggerisce altrettanto spesso un'ortografia alternativa. Il meccanismo usato negli elaboratori di testo è basato sulla consultazione di un elenco di parole ortograficamente corrette.
+  \item Google dà accesso alle informazioni contenute in Internet, ma non le usa per operare. Google conosce solo il proprio campionamento della rete e dell'attività dei suoi utenti, in particolare una statistica delle ricerche che sono state fatte collegata ad una statistica dei risultati ottenuti. L'ortografia corretta produce molti risultati e lunghe sequenze di ricerche collegate. L'ortografia errata non produce molte risposte, e brevi sequenze di ricerca.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[plain,allowframebreaks]\small\frametitle{Altri strumenti}
+ 
+  \begin{itemize}
+    \item Probabilmente, questo modo di operare è molto vicino ad uno dei meccanismi suggeriti dalla psicologia evolutiva per spiegare come impariamo a parlare correttamente e a scrivere correttamente. Il meccanismo di ottimizzazione, cioè il movimento verso l'informazione cercata è interamente nelle mani dell'utente, che può rifiutare il suggerimento.
+
+Sono in corso ricerche per l'estensione di questi meccanismi alle immagini e a diversi mezzi di comunicazione, come i telefoni cellulari. Sono anche in corso ricerche su meccanismi di traduzione automatica, ora parzialmente operanti, basati su metodologie analoghe.
+
+Il meccanismo descritto non prevede nessun tipo di analisi grammaticale o semantica, tanto meno ontologica. Google non opera in questa direzione secondo una scelta strategica che è stata criticata. Nel linguaggio del teorico del linguaggio Noan Chomsky, potremmo dire che l'algoritmo di correzione ha una buona prestazione (performance) ma non ha competenza (competence). La conclusione sarebbe per Chomsky che Google, sulla base di questo tipo di algoritmi, non può imparare a parlare. C'è stato un interessante dibattito \url{http://norvig.com/chomsky.html} su questo punto tra il dirigente di Google Peter Norving e Noam Chomsky stesso. La risposta dei dirigenti di Google a questo tipo di obiezione è: se sapete fare di meglio, allora fatelo!
+
+La ricerca sulla grammatica, sulla semantica, e sull'ontologia dei linguaggi è stato l'obbiettivo della generazione precedente di ricercatori in intelligenza artificiale, ma quello che si può dire è che i risultati non sono stati quelli sperati. Come si vede bene negli esempi del Page Rank e della correzione ortografica, Google non tocca i contenuti, ma opera solo osservando il comportamento collettivo dei suoi clienti. D'altra parte, è difficile immaginare un sistema di traduzione automatica che non consideri mai i contenuti. Un esempio interessante anche se limitato è il problema della censura di contenuti pornografici o politici richiesta da alcuni governi a industrie di Internet. Questo sembrerebbe richiedere un'analisi dei contenuti.
+
+Un altro componente essenziale della struttura interna di Google e oggetti tecnici analoghi è un algoritmo di apprendimento automatico supervisionato ispirato al funzionamento del cervello umano, le reti neurali. Una rete neurale è un particolare modello la cui struttura è classica. Il componente elementare è una formula analitica che Frank Rosenblatt nella seconda metà degli anni Cinquanta ha denominato percettrone. Rosenblatt si poneva il problema di fare non una macchiana che riconosce le forme elementari (quadrati, triangoli, cerchi) basandosi su una caratterizzazione a priori delle varie forme, ma una macchina che impara a riconoscere le forme osservando degli esempi. Per far questo si è ispirato ad un modello schematico di funzionamento del sistema di neuroni del cervello umano. Il percettrone combina, con una operazione algebrica, vari valori di ingresso con altrettanti parametri da determinarsi e trasmette il risultato tramite una funzione assegnata detta funzione di attivazione. I risultati del primo strato di percettroni diventano poi l'ingresso di un altro strato di percettroni, e così via, fino a produrre un'uscita, costruendo così una rete neurale. Alla rete vengono forniti insiemi di dati di ingresso e uscita e l'addestramento consiste nella scelta di un insieme di parametri che meglio riproducono i dati.
+
+Si tratta di una procedura classica, cioè una di quelle di cui parla George Box, precisamente è il modello statistico detto di regressione non lineare. La differenza dai modelli classici è il fatto che non è un modello parsimonioso, anzi presenta un eccesso di parametri. Ma anche questo non è nuovo: l'abbondanza di parametri viene risolta con particolari tecniche matematiche, per esempio la penalizzazione, e con l'uso sistematico del calcolo automatico. La penalizzazione sceglie fra tutti i parametri possibili la combinazione più semplice rispetto ad un determinato criterio. Tutto questo funziona bene, ma, ancora una volta, è molto lontano dal costituire un vero nuovo paradigma scientifico.
+
+Le reti neurali si sono fatte i denti sul problema del riconoscimento delle cifre scritte a mano e, successivamente, sono stati risolti altri problemi dello stesso tipo, come il riconoscimento di immagini fotografiche, ottenuto tramite un adattamento del modello interno e un aumento del numero di strati.
+
+La soluzione di problemi ancora più complessi, cioè il riconoscimento di immagini tridimensionali, o il controllo in situazioni dinamiche, come la guida automatica, richiedono probabilmente l'uso di metodi non generici, ma adattati alla specifica applicazione. Le immagini tridimensionali devono essere riconosciute anche quando sono sottoposte a deformazioni importanti: una persona può essere in piedi o seduta. La ricerca attuale si orienta verso metodi geometrici che partono da una definizione astratta di forma, intesa come invariante rispetto ad un gruppo di trasformazioni, e metodi specifici di riduzione delle dimensioni.
+
+A conclusione di questa carrellata sui metodi che fanno funzionare Google, possiamo trarne una conclusione che ci sembra significativa. Una prima stagione dell'intelligenza artificiale ha concentrato l'attenzione sulla simulazione delle capacità intellettuali umane di livello superiore, quella attuale sembra invece raggiungere risultati nel campo delle capacità percettive che non comportano alcun ragionamento cosciente. Vedo una foto e riconosco una persona cara; ascolto una persona che parla e capisco quello che dice; guido l'auto pensando ad altro. Questo è il tipo di attività in cui gli attuali algorimi sembrano eccellere. Al contrario, i tentativi di costruire dei sistemi esperti che sostituiscano attività professionali o addirittura di ricerca sono ancora ad uno stadio rudimentale.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[plain,allowframebreaks]\small\frametitle{Un poco di filosofia}
+\end{frame}
+
 
 \end{document}
 
