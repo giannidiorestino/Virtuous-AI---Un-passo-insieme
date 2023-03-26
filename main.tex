@@ -328,14 +328,7 @@ L'idea iniziale di Larry Page si è sviluppata prima di tutto in una impresa ind
 \begin{frame}[plain,allowframebreaks]\small\frametitle{Altri strumenti}
  
   \begin{itemize}
-    \item Probabilmente, questo modo di operare è molto vicino ad uno dei meccanismi suggeriti dalla psicologia evolutiva per spiegare come impariamo a parlare correttamente e a scrivere correttamente. Il meccanismo di ottimizzazione, cioè il movimento verso l'informazione cercata è interamente nelle mani dell'utente, che può rifiutare il suggerimento.
-
-Sono in corso ricerche per l'estensione di questi meccanismi alle immagini e a diversi mezzi di comunicazione, come i telefoni cellulari. Sono anche in corso ricerche su meccanismi di traduzione automatica, ora parzialmente operanti, basati su metodologie analoghe.
-
-Il meccanismo descritto non prevede nessun tipo di analisi grammaticale o semantica, tanto meno ontologica. Google non opera in questa direzione secondo una scelta strategica che è stata criticata. Nel linguaggio del teorico del linguaggio Noan Chomsky, potremmo dire che l'algoritmo di correzione ha una buona prestazione (performance) ma non ha competenza (competence). La conclusione sarebbe per Chomsky che Google, sulla base di questo tipo di algoritmi, non può imparare a parlare. C'è stato un interessante dibattito \url{http://norvig.com/chomsky.html} su questo punto tra il dirigente di Google Peter Norving e Noam Chomsky stesso. La risposta dei dirigenti di Google a questo tipo di obiezione è: se sapete fare di meglio, allora fatelo!
-
-La ricerca sulla grammatica, sulla semantica, e sull'ontologia dei linguaggi è stato l'obbiettivo della generazione precedente di ricercatori in intelligenza artificiale, ma quello che si può dire è che i risultati non sono stati quelli sperati. Come si vede bene negli esempi del Page Rank e della correzione ortografica, Google non tocca i contenuti, ma opera solo osservando il comportamento collettivo dei suoi clienti. D'altra parte, è difficile immaginare un sistema di traduzione automatica che non consideri mai i contenuti. Un esempio interessante anche se limitato è il problema della censura di contenuti pornografici o politici richiesta da alcuni governi a industrie di Internet. Questo sembrerebbe richiedere un'analisi dei contenuti.
-
+    \item 
 Un altro componente essenziale della struttura interna di Google e oggetti tecnici analoghi è un algoritmo di apprendimento automatico supervisionato ispirato al funzionamento del cervello umano, le reti neurali. Una rete neurale è un particolare modello la cui struttura è classica. Il componente elementare è una formula analitica che Frank Rosenblatt nella seconda metà degli anni Cinquanta ha denominato percettrone. Rosenblatt si poneva il problema di fare non una macchiana che riconosce le forme elementari (quadrati, triangoli, cerchi) basandosi su una caratterizzazione a priori delle varie forme, ma una macchina che impara a riconoscere le forme osservando degli esempi. Per far questo si è ispirato ad un modello schematico di funzionamento del sistema di neuroni del cervello umano. Il percettrone combina, con una operazione algebrica, vari valori di ingresso con altrettanti parametri da determinarsi e trasmette il risultato tramite una funzione assegnata detta funzione di attivazione. I risultati del primo strato di percettroni diventano poi l'ingresso di un altro strato di percettroni, e così via, fino a produrre un'uscita, costruendo così una rete neurale. Alla rete vengono forniti insiemi di dati di ingresso e uscita e l'addestramento consiste nella scelta di un insieme di parametri che meglio riproducono i dati.
 
 Si tratta di una procedura classica, cioè una di quelle di cui parla George Box, precisamente è il modello statistico detto di regressione non lineare. La differenza dai modelli classici è il fatto che non è un modello parsimonioso, anzi presenta un eccesso di parametri. Ma anche questo non è nuovo: l'abbondanza di parametri viene risolta con particolari tecniche matematiche, per esempio la penalizzazione, e con l'uso sistematico del calcolo automatico. La penalizzazione sceglie fra tutti i parametri possibili la combinazione più semplice rispetto ad un determinato criterio. Tutto questo funziona bene, ma, ancora una volta, è molto lontano dal costituire un vero nuovo paradigma scientifico.
@@ -349,7 +342,24 @@ A conclusione di questa carrellata sui metodi che fanno funzionare Google, possi
 
 \end{frame}
 
-\begin{frame}[plain,allowframebreaks]\small\frametitle{Un poco di filosofia}
+\begin{frame}[plain,allowframebreaks]\small\frametitle{Filosofia: Noam Chomsky}
+
+\begin{itemize}
+    \item Il modo di operare di Google e dei successivi metodi di intelligenza artificiale sembra molto vicino ai meccanismi suggeriti dalla psicologia evolutiva per spiegare come impariamo a parlare e scrivere e a vedere e disegnare.  correttamente. Anche le applicazioni, recentissime, di traduzione automatica sembrano essere dello stesso tipo.
+    
+\item Il meccanismo descritto non prevede nessun tipo di analisi grammaticale o semantica, tanto meno ontologica. Nel linguaggio del teorico del linguaggio Noan Chomsky, potremmo dire che, ad esempio, l'algoritmo di correzione ha una buona prestazione (performance) ma non ha competenza (competence).
+
+\item La conclusione è per Chomsky che questa intelligenza artificiale, sulla base di questo tipo di algoritmi, non potrebbe imparare a parlare. 
+
+\item C'è stato un interessante dibattito \url{http://norvig.com/chomsky.html} su questo punto tra il dirigente di Google Peter Norving e Noam Chomsky stesso. La risposta dei dirigenti di Google a questo tipo di obiezione è: se sapete fare di meglio, allora fatelo!
+
+\item La ricerca sulla grammatica, sulla semantica, e sull'ontologia dei linguaggi è stato l'obbiettivo della generazione precedente di ricercatori in intelligenza artificiale, ma quello che bisogna dire è che i risultati non sono stati quelli sperati.
+
+\item Google. OpenAI e gli altri  non toccano i contenuti, ma operano solo osservando il comportamento collettivo degli utenti. D'altra parte, è difficile immaginare un elaborazione del linguaggio che non consideri mai i contenuti. Un esempio interessante anche se limitato è il problema della censura di contenuti politicamente scorretti  richiesta da alcune agenzie di controllo.
+
+\item La problematica in questo campo è completamente aperta.
+
+\end{itemize}
 \end{frame}
 
 
