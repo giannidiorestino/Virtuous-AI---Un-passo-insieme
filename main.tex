@@ -84,7 +84,7 @@
 \newcommand{\tensorat}[3]{\prescript{#1}{}S^{#2}\maxexpat{#3}}
 
 \renewcommand{\emph}{\rosso}
-\renewcommand{\transport}[2]{{\mathbb U} _ {#1} ^ {#2}}
+% \renewcommand{\transport}[2]{{\mathbb U} _ {#1} ^ {#2}}
 
 %
 %% end Gianni's macros
@@ -96,7 +96,7 @@
 
 \institute[CCA]{\includegraphics[height=4em]{pictures/deCastro-logo.pdf} \quad \includegraphics[height=4em]{pictures/logo Nuovo SEFIR con URL.png}}
 
-\date{28 marzo 2023}
+\date{DRAFT \today} %%%28 marzo 2023}
 
 \begin{document} 
 % 
@@ -322,30 +322,57 @@ L'idea iniziale di Larry Page si è sviluppata prima di tutto in una impresa ind
   La crescita di Internet dagli inizi ad oggi rende irrealizzabile l'idea di percorrerlo tutto per rispondere ad un singola interrogazione. Dunque, Google campiona pagine web percorrendo la rete di Internet e ne tiene una copia corrente nei suoi server. Poi, Page Rank e gli analoghi algoritmi navigano nelle copie per effettuare le ricerche.
 \item Inoltre, Google si basa in modo sostanziale su meccanismi di apprendimento automatico supervisionato. Un esempio molto chiaro di meccanismo di apprendimento è l'algoritmo di correzione ortografica di Google. Il problema di Google è correggere gli errori di ortografia nelle ricerche fatte dagli utenti. L'utente sperimenta che non solo Google riconosce spesso gli errori, ma suggerisce altrettanto spesso un'ortografia alternativa. Il meccanismo usato negli elaboratori di testo è basato sulla consultazione di un elenco di parole ortograficamente corrette.
   \item Google dà accesso alle informazioni contenute in Internet, ma non le usa per operare. Google conosce solo il proprio campionamento della rete e dell'attività dei suoi utenti, in particolare una statistica delle ricerche che sono state fatte collegata ad una statistica dei risultati ottenuti. L'ortografia corretta produce molti risultati e lunghe sequenze di ricerche collegate. L'ortografia errata non produce molte risposte, e brevi sequenze di ricerca.
+  \item Il carattere statistico dell'intelligenza artificiale non si limita alla statistica di grandi masse di dati, ma coinvolge anche i metodi di calcolo, anch'essi di carattere statistico.
+  \item \`E importante osservare che algoritmi matematici di carattere statistico non sono meno matematicamente certi di quelli deterministici. Semplicemente si riferiscono ad una popolazione di individui anziché ad un singolo individuo. L'affermazione ``la probabilità di testa nel lancio di una moneta corretta'' non è, per il matematico, meno certa di ``2*2=4''.\end{itemize}
+\end{frame}
+
+
+\begin{frame}[plain,allowframebreaks]\small\frametitle{Strumenti: algoritmi genetici}
+
+  \begin{itemize}
+    \item PROBLEMA: Uno dei problemi di calcolo più comuni è la soluzione di un problema di ottimizzazione, cioè trovare quei valori delle variabili che rendono massimo il valore di una funzione. Molti problemi fisici si lasciano descrivere in termini di ottimizzazione.
+\item ISPIRAZIONE: Darwin usa in senso esplicativo un algoritmo di ottimizzazione. Viceversa, la tecnologia usa l'algoritmo per risolvere problemi tecnologici.
+  \item Una popolazione è un insieme di individui ciasuno dei quali ha un suo valore di una quantità di interesse. Per esempio: 100 galline e il peso di ciascuna.
+  \item Un agente ha una sua valutazione su quale l'utilità in funzione della quantità di interesse. In questo campo questa funzione di solito si chiama funzione di fittness.
+  \item La popolazione viene esaminata e vengono scelte quelle con utilità più alta. Per esempio le 50 galline con utilità almeno mediana.
+  \item La popolazione selezionata viene riprodotta e si ottiene una nuova popolazione, salvo variazioni statistiche (mutazione).
+  \item TEOREMA: nei tempi lunghi. la distribuzione della popolazione si stabilizza alla migliore utilità, salvo la variabilità indotta dal meccanismo di mutazione.
+    \item APPLICAZIONE: un problema di ottimizzazione si può risulvere generando artificialmente una popolazione e un meccanismo di mutazione.
   \end{itemize}
 \end{frame}
 
-\begin{frame}[plain,allowframebreaks]\small\frametitle{Strumenti: algoritmi genetici}
-\end{frame}
-
 \begin{frame}[plain,allowframebreaks]\small\frametitle{Strumenti: rete neurale}
- 
+
+  \includegraphics[width=.5\textwidth]{pictures/kernel-machine.png} \hfill \includegraphics[height=.5\textheight]{pictures/neural-network.png}
+
+  {\tiny Da \url{https://en.wikipedia.org/wiki/Artificial_neural_network}}
   \begin{itemize}
     \item 
-Un altro componente essenziale della struttura interna di Google e oggetti tecnici analoghi è un algoritmo di apprendimento automatico supervisionato ispirato al funzionamento del cervello umano, le reti neurali. Una rete neurale è un particolare modello la cui struttura è classica. Il componente elementare è una formula analitica che Frank Rosenblatt nella seconda metà degli anni Cinquanta ha denominato percettrone. Rosenblatt si poneva il problema di fare non una macchiana che riconosce le forme elementari (quadrati, triangoli, cerchi) basandosi su una caratterizzazione a priori delle varie forme, ma una macchina che impara a riconoscere le forme osservando degli esempi. Per far questo si è ispirato ad un modello schematico di funzionamento del sistema di neuroni del cervello umano. Il percettrone combina, con una operazione algebrica, vari valori di ingresso con altrettanti parametri da determinarsi e trasmette il risultato tramite una funzione assegnata detta funzione di attivazione. I risultati del primo strato di percettroni diventano poi l'ingresso di un altro strato di percettroni, e così via, fino a produrre un'uscita, costruendo così una rete neurale. Alla rete vengono forniti insiemi di dati di ingresso e uscita e l'addestramento consiste nella scelta di un insieme di parametri che meglio riproducono i dati.
-
-Si tratta di una procedura classica, cioè una di quelle di cui parla George Box, precisamente è il modello statistico detto di regressione non lineare. La differenza dai modelli classici è il fatto che non è un modello parsimonioso, anzi presenta un eccesso di parametri. Ma anche questo non è nuovo: l'abbondanza di parametri viene risolta con particolari tecniche matematiche, per esempio la penalizzazione, e con l'uso sistematico del calcolo automatico. La penalizzazione sceglie fra tutti i parametri possibili la combinazione più semplice rispetto ad un determinato criterio. Tutto questo funziona bene, ma, ancora una volta, è molto lontano dal costituire un vero nuovo paradigma scientifico.
-
-Le reti neurali si sono fatte i denti sul problema del riconoscimento delle cifre scritte a mano e, successivamente, sono stati risolti altri problemi dello stesso tipo, come il riconoscimento di immagini fotografiche, ottenuto tramite un adattamento del modello interno e un aumento del numero di strati.
-
-La soluzione di problemi ancora più complessi, cioè il riconoscimento di immagini tridimensionali, o il controllo in situazioni dinamiche, come la guida automatica, richiedono probabilmente l'uso di metodi non generici, ma adattati alla specifica applicazione. Le immagini tridimensionali devono essere riconosciute anche quando sono sottoposte a deformazioni importanti: una persona può essere in piedi o seduta. La ricerca attuale si orienta verso metodi geometrici che partono da una definizione astratta di forma, intesa come invariante rispetto ad un gruppo di trasformazioni, e metodi specifici di riduzione delle dimensioni.
-
-A conclusione di questa carrellata sui metodi che fanno funzionare Google, possiamo trarne una conclusione che ci sembra significativa. Una prima stagione dell'intelligenza artificiale ha concentrato l'attenzione sulla simulazione delle capacità intellettuali umane di livello superiore, quella attuale sembra invece raggiungere risultati nel campo delle capacità percettive che non comportano alcun ragionamento cosciente. Vedo una foto e riconosco una persona cara; ascolto una persona che parla e capisco quello che dice; guido l'auto pensando ad altro. Questo è il tipo di attività in cui gli attuali algorimi sembrano eccellere. Al contrario, i tentativi di costruire dei sistemi esperti che sostituiscano attività professionali o addirittura di ricerca sono ancora ad uno stadio rudimentale.
+      Un altro componente essenziale della struttura interna di Google e oggetti tecnici analoghi è un algoritmo di apprendimento automatico supervisionato ispirato al funzionamento del cervello umano, le reti neurali.
+    \item Una rete neurale è un particolare modello di funzione matematica. Il componente elementare è una formula analitica che Frank Rosenblatt nella seconda metà degli anni Cinquanta ha pubblicizzato con il nome di \emph{percettrone}. Precedentemente il percettrone era una particolare architettura di computer dedicato al riconoscimento delle immagini inventata da nel 1943 da 1943 by McCulloch and Pitts.
+\item In a 1958 press conference organized by the US Navy, Rosenblatt made statements about the perceptron that caused a heated controversy among the fledgling AI community; based on Rosenblatt's statements, The New York Times reported the perceptron to be "the embryo of an electronic computer that [the Navy] expects will be able to walk, talk, see, write, reproduce itself and be conscious of its existence." {\tiny \url{https://en.wikipedia.org/wiki/Perceptron}}.
+    \item I risultati del primo strato di percettroni diventano poi l'ingresso di un altro strato di percettroni, e così via, fino a produrre un'uscita, costruendo così una rete neurale. \`E il \emph{deep learning}.
+      \item Alla rete vengono forniti insiemi di dati di ingresso e uscita e l'addestramento consiste nella scelta di un insieme di parametri che meglio riproducono i dati.
+\item Si tratta di una procedura classica: è il modello statistico detto di regressione non lineare.
+  \item La differenza dai modelli classici è il fatto che non è un modello parsimonioso, anzi presenta un eccesso di parametri. Ma anche questo non è nuovo: l'abbondanza di parametri viene risolta con particolari tecniche matematiche, per esempio la penalizzazione, e con l'uso sistematico del calcolo automatico.
+\item 
+  Le reti neurali si sono fatte i denti sul problema del riconoscimento delle cifre scritte a mano e, successivamente, sono stati risolti altri problemi dello stesso tipo, come il riconoscimento di immagini fotografiche, ottenuto tramite un adattamento del modello interno e un aumento del numero di strati.
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}[plain,allowframebreaks]\small\frametitle{Strumenti: auto-codificatore}
+
+  \begin{center}
+    \includegraphics[height=.4\textheight]{pictures/autoencoder.jpeg}
+  \end{center}
+
+  {\tiny Da \url{https://www.analyticsvidhya.com/blog/2021/01/}}
+  
+  \begin{itemize}
+  \item Un altro problema di calcolo di base è la riduzione di dimensioni. \`E interessante il fatto che la nozione di riduzione di dimensioni e la nozione di spiegazione tendono a coincidere in questo contesto. Questi metodi classicamente si chiamavano analisi dei \emph{fattori} e sono nati in pricologia sperimentale.
+    \item L'auto codificatore è una rete neurale che realizza l'analisi dei fattori non lineare trovando il miglior riassunto in poche variabili.
+  \end{itemize}
 \end{frame}
 
 
